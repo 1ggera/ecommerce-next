@@ -1,10 +1,12 @@
   import React from 'react'
+  import Navbar from '../components/Navbar/Navbar'
   
   const Home = () => {
     return (
-      <h1>
-        <div>Hello Next JS perri! </div>
-      </h1>
+      <div>
+        <Navbar />
+        <h1>Hello al ecommerce Multi</h1>
+      </div>
     )
   }
   
