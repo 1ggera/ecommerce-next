@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar/Navbar'
   
 const Home = () => {
-  const [productList, setProductList] = useState([])
+  const [productList, setProductList] = useState<TProduct[]>([])
 
   useEffect(() => {
     window
@@ -11,8 +11,6 @@ const Home = () => {
       .then(({ data, length }) => {
         setProductList(data)
       })
-      //.then(console.log)
-      //.then((json) => (json))
   }, [])
 
   return (
@@ -20,7 +18,15 @@ const Home = () => {
       <Navbar />
       <div><h1>Hello al ecommerce Multi</h1></div>
       {productList.map((product) => (
-        <div>{product.name}</div>
+        <div>
+          <h3>Remera modelo {product.image}</h3>
+          <p>
+            Precio: {product.price}
+            <br />
+            Descripción: {product.attributes.description}
+          </p>
+        </div>
+        
       ))}
     </div>
   )

@@ -10,6 +10,8 @@ const allShirts = async (request: IncomingMessage, response: ServerResponse) => 
   response.statusCode = 200 //indico q todo va bien
   response.setHeader( 'Content-type', 'application/json' ) //aviso q el contenido de la consulta es un json
   response.end(JSON.stringify({ data: allEntries, length })) //la respues será: todas las entradas y la longitud de items
+
+  //response.end(JSON.stringify({ hello: 'world' }))
 }
 
 export default allShirts;

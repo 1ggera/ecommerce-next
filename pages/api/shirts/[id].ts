@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import DB from "@database"
+import DB from "@database" // <-- MISMO MANAGER QUE EN EL ENDPOINT DE TODAS LAS REMERAS
 
 const allProducts = async (request: NextApiRequest, response: NextApiResponse) => {
   const db = new DB()

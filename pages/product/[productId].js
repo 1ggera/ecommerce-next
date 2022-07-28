@@ -1,3 +1,4 @@
+//ruta dinámica q permite traer elementos desde el ID
 import React from 'react'
 import { useRouter } from 'next/router'
 
